@@ -3,149 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailored Stone Solutions</title>
+    <title>Marbles & Chemicals - Marblex</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script/marblesAndChemicals.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <script src="../script/animations.js"></script>
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
-  <body class="bg-white">
+  <body class="bg-white overflow-x-hidden">
     <div id="header"></div>
 
-    <!-- Header Section -->
-    <header class="py-8">
-      <div class="container mx-auto px-4">
-        <p class="text-gray-600 text-lg mb-4">/ Marble Chemicals</p>
-        <!-- Main Heading -->
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-12">
-          Superior Stone Solutions: <br> Precision and Beauty <br> Combined
-        </h2>
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-[#30373F] overflow-hidden" data-animate-section>
+      <div class="absolute inset-0 opacity-30">
+        <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-5.jpg" alt="Marble Chemicals" class="w-full h-full object-cover" />
       </div>
-    </header>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#30373F]/50 to-[#30373F]/90"></div>
+      
+      <div class="relative container mx-auto px-4 h-full flex flex-col justify-center">
+        <div data-animate-from="left">
+          <p class="text-[#E6AF5D] text-lg mb-4 flex items-center">
+            <span class="w-8 h-[1px] bg-[#E6AF5D] mr-3"></span>
+            PRODUCTS
+          </p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Marble Chemicals &<br/>Solutions
+          </h1>
+          <p class="text-[#616161] text-lg max-w-2xl mb-8">
+            Discover our premium range of stone care products and chemical solutions
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Category Navigation -->
-    <div class="container mx-auto px-4">
-      <div class="flex flex-wrap border-b border-gray-200 mb-8">
-        <div class="px-6 py-4 bg-gray-900 text-white cursor-pointer">All</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Cleaner and Stain Remover</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Densifiers</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Epoxy</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Epoxy Grout & Pu Adhesive</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Mastics</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Polish</div>
-        <div class="px-6 py-4 text-gray-700 cursor-pointer">Sealer</div>
+    <div class="sticky top-0 bg-white shadow-md z-10" data-animate-from="up">
+      <div class="container mx-auto px-4 overflow-x-auto">
+        <div class="flex whitespace-nowrap">
+          <button class="px-6 py-4 bg-[#30373F] text-white hover:bg-[#E6AF5D] transition-colors">All</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Cleaner and Stain Remover</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Densifiers</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Epoxy</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Epoxy Grout & Pu Adhesive</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Mastics</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Polish</button>
+          <button class="px-6 py-4 text-[#616161] hover:text-[#E6AF5D] transition-colors">Sealer</button>
+        </div>
       </div>
     </div>
 
     <!-- Product Grid -->
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-px">
-        <!-- Product 1 -->
-        <div class="border border-gray-200 m-px">
-          <div class="flex flex-col items-center p-8 relative">
-            <div class="w-52 h-52 bg-gray-100 flex items-center justify-center mb-6 relative">
-              <img src="https://dushproducts.com/wp-content/uploads/2024/06/Stone-Wonder-1.jpg" alt="STONE WONDER" />
-              <div class="absolute bottom-4 right-4">→</div>
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product Card 1 -->
+          <div class="group" data-animate-from="up" data-delay="100">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+              <div class="relative overflow-hidden">
+                <img src="https://dushproducts.com/wp-content/uploads/2024/06/Stone-Wonder-1.jpg" 
+                     alt="STONE WONDER" 
+                     class="w-full h-64 object-contain p-4 transform group-hover:scale-110 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-[#30373F]/0 group-hover:bg-[#30373F]/10 transition-colors duration-300"></div>
+              </div>
+              <div class="p-6 border-t border-gray-100">
+                <h3 class="text-xl font-bold text-[#30373F] mb-3 group-hover:text-[#E6AF5D] transition-colors">
+                  STONE WONDER
+                </h3>
+                <a href="#" class="inline-flex items-center text-[#E6AF5D] hover:text-[#30373F] transition-colors">
+                  View Details
+                  <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+              </div>
             </div>
-            <h3 class="text-lg font-bold uppercase">STONE WONDER</h3>
           </div>
+
+          <!-- Additional Product Cards with increasing delays -->
+          <!-- ... Similar structure for other products ... -->
         </div>
 
-        <!-- Product 2 -->
-        <div class="border border-gray-200 m-px">
-          <div class="flex flex-col items-center p-8 relative">
-            <div class="w-52 h-52 bg-gray-100 flex items-center justify-center mb-6 relative">
-              <img src="https://dushproducts.com/wp-content/uploads/2024/09/Glaze-Chem-Large.jpeg" alt="GLAZE CHEM" />
-              <div class="absolute bottom-4 right-4">→</div>
-            </div>
-            <h3 class="text-lg font-bold uppercase">GLAZE CHEM</h3>
-          </div>
+        <!-- Pagination -->
+        <div class="flex justify-center items-center mt-12 gap-2" data-animate-from="up">
+          <button class="px-4 py-2 text-[#616161] hover:text-[#E6AF5D] transition-colors">Previous</button>
+          <button class="px-4 py-2 bg-[#30373F] text-white rounded">1</button>
+          <button class="px-4 py-2 text-[#616161] hover:text-[#E6AF5D] transition-colors">2</button>
+          <button class="px-4 py-2 text-[#616161] hover:text-[#E6AF5D] transition-colors">3</button>
+          <button class="px-4 py-2 text-[#616161] hover:text-[#E6AF5D] transition-colors">Next</button>
         </div>
+      </div>
+    </section>
 
-        <!-- Product 3 -->
-        <div class="border border-gray-200 m-px">
-          <div class="flex flex-col items-center p-8 relative">
-            <div class="w-52 h-52 bg-gray-100 flex items-center justify-center mb-6 relative">
-              <img src="https://dushproducts.com/wp-content/uploads/2024/06/DU-Safe.jpg" alt="DUSH DU SAFE" />
-              <div class="absolute bottom-4 right-4">→</div>
-            </div>
-            <h3 class="text-lg font-bold uppercase">DUSH DU SAFE</h3>
+    <!-- Features Section -->
+    <section class="py-24 bg-[#30373F]" data-animate-section>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-white" data-animate-from="left">
+            <h2 class="text-2xl font-bold mb-6">
+              DISCOVER EXCELLENCE:<br/>OUR PREMIUM RANGE
+            </h2>
           </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="border border-gray-200 m-px">
-          <div class="flex flex-col items-center p-8 relative">
-            <div class="w-52 h-52 bg-gray-100 flex items-center justify-center mb-6 relative">
-              <img src="https://dushproducts.com/wp-content/uploads/2024/09/Dazzle-Powder.jpg" alt="DAZZLE POWDER" />
-              <div class="absolute bottom-4 right-4">→</div>
-            </div>
-            <h3 class="text-lg font-bold uppercase">DAZZLE POWDER</h3>
+          <div data-animate-from="up" data-delay="200">
+            <p class="text-[#616161]">
+              Explore DUSH's products, crafted for demanding stone installations. Our solutions excel in complex environments, ensuring flawless results.
+            </p>
           </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="border border-gray-200 m-px">
-          <div class="flex flex-col items-center p-8 relative">
-            <div class="w-52 h-52 bg-gray-100 flex items-center justify-center mb-6 relative">
-              <img src="https://dushproducts.com/wp-content/uploads/2024/09/Liquid-Cera.jpg" alt="LIQUID CERA" />
-              <div class="absolute bottom-4 right-4">→</div>
-            </div>
-            <h3 class="text-lg font-bold uppercase">LIQUID CERA</h3>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="border border-gray-200 m-px">
-          <div class="flex flex-col items-center p-8 relative">
-            <div class="w-52 h-52 bg-gray-100 flex items-center justify-center mb-6 relative">
-              <img src="https://dushproducts.com/wp-content/uploads/2024/06/Mastics-Lite.jpg" alt="DUSH MASTICS LITE" />
-              <div class="absolute bottom-4 right-4">→</div>
-            </div>
-            <h3 class="text-lg font-bold uppercase">DUSH MASTICS LITE</h3>
+          <div data-animate-from="right" data-delay="400">
+            <p class="text-[#616161]">
+              Enhance and protect your stone surfaces with DUSH. From strengthening marble to removing stubborn stains, our advanced methods ensure lasting beauty.
+            </p>
           </div>
         </div>
       </div>
-
-      <!-- Pagination -->
-      <div class="flex justify-center items-center my-8 gap-2">
-        <div class="px-4 py-2 cursor-pointer text-gray-600">Previous</div>
-        <div class="px-4 py-2 cursor-pointer text-gray-900 font-bold">1</div>
-        <div class="px-4 py-2 cursor-pointer text-gray-600">2</div>
-        <div class="px-4 py-2 cursor-pointer text-gray-600">3</div>
-        <div class="px-4 py-2 cursor-pointer text-gray-600">4</div>
-        <div class="px-4 py-2 cursor-pointer text-gray-600">5</div>
-        <div class="px-4 py-2 cursor-pointer text-gray-600">Next</div>
-      </div>
-    </div>
-
-    <!-- Product Features Section -->
-    <div class="container mx-auto px-4 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Column 1 -->
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-6">
-            DISCOVER EXCELLENCE: EXPLORE OUR PREMIUM PRODUCT RANGE
-          </h2>
-        </div>
-        
-        <!-- Column 2 -->
-        <div class="p-6">
-          <p class="text-gray-700">
-            Explore DUSH's products, crafted for demanding stone installations. Our solutions excel in complex environments like high-rise buildings and waterfront areas, ensuring flawless results. Specialized in seamless joints and precision handling of delicate materials, our products preserve the integrity and beauty of your surfaces, enhancing both aesthetics and durability.
-          </p>
-        </div>
-        
-        <!-- Column 3 -->
-        <div class="p-6">
-          <p class="text-gray-700">
-            Enhance and protect your stone surfaces with DUSH. From strengthening marble to removing stubborn stains, our advanced methods ensure lasting beauty and resilience. Our maintenance solutions keep your floors pristine, ensuring they withstand the test of time while maintaining their luxurious appearance.
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
 
     <div id="footer"></div>
   </body>

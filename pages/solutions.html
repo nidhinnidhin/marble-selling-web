@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailored Stone Solutions</title>
+    <title>Tailored Stone Solutions - Marblex</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script/solutions.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <script src="../script/animations.js"></script>
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
       .solution-grid {
         display: grid;
@@ -52,81 +51,147 @@
       }
     </style>
   </head>
-  <body class="bg-white">
+  <body class="bg-white overflow-x-hidden">
     <div id="header"></div>
-    <!-- Header Section -->
-    <header class="py-8">
-      <div class="container mx-auto px-4">
-        <p class="text-gray-600 text-lg mb-4">/ Solutions</p>
-        <!-- Main Heading -->
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-12">
-          ART OF EXCELLENCE
-        </h2>
-      </div>
-    </header>
 
-    <div class="relative h-[500px]">
-      <img
-        src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-5.jpg"
-        alt="Stone samples and color swatches"
-        class="w-full h-full object-cover"
-      />
-    </div>
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] bg-[#1f2937] overflow-hidden" data-animate-section>
+      <div class="absolute inset-0 opacity-30">
+        <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-5.jpg" alt="Stone solutions" class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#1f2937]/50 to-[#1f2937]/90"></div>
+      
+      <div class="relative container mx-auto px-4 h-full flex flex-col justify-center">
+        <div data-animate-from="left">
+          <p class="text-[#E4A853] text-lg mb-4 flex items-center">
+            <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+            SOLUTIONS
+          </p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            INNOVATIVE STONE<br/>SOLUTIONS
+          </h1>
+          <p class="text-white/70 text-lg max-w-2xl mb-8">
+            Discover our comprehensive range of stone solutions tailored to your needs
+          </p>
+          <a href="#solutions" class="inline-flex items-center px-8 py-4 bg-[#E4A853] text-white hover:bg-[#c89447] transition-all duration-300 group">
+            EXPLORE SOLUTIONS
+            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Solutions Grid Section -->
-    <section class="py-12 bg-white">
+    <section id="solutions" class="py-24 bg-white" data-animate-section>
       <div class="container mx-auto px-4">
-        <div class="solution-grid border-t border-l border-gray-200">
-          <!-- Crack and Hole Filling -->
-          <div class="solution-item p-8">
-            <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" alt="Crack and Hole Filling" class="w-full aspect-square object-cover mb-6" />
-            <h3 class="text-lg font-medium">CRACK AND HOLE FILLING</h3>
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-animate-from="up">
+          <span class="text-[#E4A853] text-lg inline-flex items-center justify-center mb-4">
+            <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+            OUR SOLUTIONS
+            <span class="w-8 h-[1px] bg-[#E4A853] ml-3"></span>
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-[#1f2937] mb-6">Professional Stone Care</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Explore our comprehensive range of stone care solutions designed to protect and enhance your valuable surfaces
+          </p>
+        </div>
+
+        <!-- Solutions Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Solution Card 1 -->
+          <div class="group" data-animate-from="up" data-delay="100">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+              <div class="relative overflow-hidden">
+                <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" 
+                     alt="Crack and Hole Filling" 
+                     class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-[#1f2937] mb-3 group-hover:text-[#E4A853] transition-colors">
+                  Crack and Hole Filling
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Professional repair solutions for damaged stone surfaces
+                </p>
+                <a href="#" class="inline-flex items-center text-[#E4A853] hover:text-[#c89447] transition-colors">
+                  Learn More
+                  <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <!-- Daily Maintenance -->
-          <div class="solution-item p-8">
-            <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" alt="Daily Maintenance" class="w-full aspect-square object-cover mb-6" />
-            <h3 class="text-lg font-medium">DAILY MAINTENANCE OF MARBLE FLOORS</h3>
+          <!-- Solution Card 2 -->
+          <div class="group" data-animate-from="up" data-delay="200">
+            <!-- Similar structure with different content -->
           </div>
 
-          <!-- Gloss Enhancement -->
-          <div class="solution-item p-8">
-            <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" alt="Gloss Enhancement" class="w-full aspect-square object-cover mb-6" />
-            <h3 class="text-lg font-medium">GLOSS ENHANCEMENT</h3>
-          </div>
-
-          <!-- Installation of Marble -->
-          <div class="solution-item p-8">
-            <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" alt="Installation of Marble" class="w-full aspect-square object-cover mb-6" />
-            <h3 class="text-lg font-medium">INSTALLATION OF MARBLE IN ANY CHALLENGING SITUATION</h3>
-          </div>
-
-          <!-- Marble Strengthening -->
-          <div class="solution-item p-8">
-            <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" alt="Marble Strengthening" class="w-full aspect-square object-cover mb-6" />
-            <h3 class="text-lg font-medium">MARBLE STRENGTHENING WITH DENSIFICATION</h3>
-          </div>
-
-          <!-- Superior Quality Joint -->
-          <div class="solution-item p-8">
-            <img src="https://dushproducts.com/wp-content/uploads/2024/09/SLIDER-3.jpg" alt="Superior Quality Joint" class="w-full aspect-square object-cover mb-6" />
-            <h3 class="text-lg font-medium">SUPERIOR QUALITY JOINT FILLER SOLUTION</h3>
-          </div>
+          <!-- Add more solution cards as needed -->
         </div>
       </div>
     </section>
 
     <!-- Quality Solutions Section -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">QUALITY SOLUTIONS START WITH QUALITY PRODUCTS</h2>
-        <a href="#" class="inline-flex items-center px-8 py-3 bg-black text-white hover:bg-gray-800 transition-colors duration-300">
-          EXPLORE OUR PRODUCTS
-          <i class="fas fa-arrow-right ml-2"></i>
-        </a>
+    <section class="py-24 bg-[#1f2937]" data-animate-section>
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center" data-animate-from="up">
+          <span class="text-[#E4A853] text-lg inline-flex items-center justify-center mb-4">
+            <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+            GET STARTED
+            <span class="w-8 h-[1px] bg-[#E4A853] ml-3"></span>
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">
+            QUALITY SOLUTIONS START WITH QUALITY PRODUCTS
+          </h2>
+          <p class="text-white/70 mb-12 text-lg">
+            Experience the difference with our professional-grade stone care solutions
+          </p>
+          <a href="#contact" class="inline-flex items-center px-8 py-4 bg-[#E4A853] text-white hover:bg-[#c89447] transition-all duration-300 group">
+            CONTACT US NOW
+            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
       </div>
     </section>
 
     <div id="footer"></div>
+
+    <style>
+      /* Enhanced animations and transitions */
+      [data-animate-from] {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      [data-animate-from="left"] {
+        transform: translateX(-50px);
+      }
+
+      [data-animate-from="right"] {
+        transform: translateX(50px);
+      }
+
+      [data-animate-from].animated {
+        opacity: 1;
+        transform: translate(0);
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Card hover effects */
+      .group:hover .group-hover\:scale-110 {
+        transform: scale(1.1);
+      }
+
+      .group:hover .group-hover\:opacity-100 {
+        opacity: 1;
+      }
+    </style>
   </body>
 </html>

@@ -1,0 +1,295 @@
+.opacity-0 {
+    opacity: 0;
+  }
+  
+  .animated {
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    opacity: 1;
+    transform: translate(0);
+  }
+  
+  /* Initial transform positions */
+  .transform-left {
+    transform: translateX(-50px);
+  }
+  
+  .transform-right {
+    transform: translateX(50px);
+  }
+  
+  .transform-up {
+    transform: translateY(50px);
+  }
+  
+  /* Hero section animations */
+  .hero-content > * {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Header fade-in and slide down */
+  header {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Section title animations */
+  h2, .section-title {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  h2:after, .section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #E4A853;
+    transition: width 1.5s ease-out;
+  }
+  
+  h2.animated:after, .section-title.animated:after {
+    width: 100px;
+  }
+  
+  /* Process steps hover effect */
+  .process-step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Service item animations */
+  .service-item {
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Carousel items fade and scale */
+  .carousel-item .relative {
+    transition: transform 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .carousel-item:hover .relative {
+    transform: translateY(-5px);
+  }
+  
+  .carousel-item img {
+    transition: transform 0.7s ease;
+  }
+  
+  .carousel-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Stone item animations */
+  .stone-item {
+    transition: transform 0.4s ease;
+  }
+  
+  .stone-item:hover {
+    transform: translateY(-8px);
+  }
+  
+  .stone-item .rounded-full {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .stone-item:hover .rounded-full {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form elements animation */
+  input, textarea, button[type="submit"] {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(228, 168, 83, 0.1);
+  }
+  
+  button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(228, 168, 83, 0.2);
+  }
+  
+  /* Staggered list item animations */
+  li {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Video background subtle zoom effect */
+  video.object-cover {
+    animation: subtleZoom 15s infinite alternate ease-in-out;
+  }
+  
+  @keyframes subtleZoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Button hover effects */
+  .bg-[#E4A853], .bg-white, .bg-[#1f2937] {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .bg-[#E4A853]:hover, .bg-white:hover, .bg-[#1f2937]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom loading animation */
+  .page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  }
+  
+  .page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader-icon {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #E4A853;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Hover animations */
+  .hover-animate {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .hover-animate:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Carousel animations */
+  .carousel-track {
+    transition: transform 0.7s ease-out;
+  }
+  
+  .carousel-item {
+    transition: opacity 0.5s ease-out;
+  }
+  
+  /* Base animations */
+  [data-animate-from] {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(1, 1, 2, 2);
+  }
+  
+  .animated {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+  }
+  
+  /* Fade animations */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide animations */
+  .slide-down {
+    animation: slideDown 0.8s ease-out forwards;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Tab animations */
+  .tab-active {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tab-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #E6AF5D;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .tab-active.active::after {
+    transform: scaleX(1);
+  }
+  
+  /* Card hover animations */
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }

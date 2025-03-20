@@ -6,10 +6,12 @@
     <title>Stone Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script/home/hero.js"></script>
+    <script src="../script/animations.js"></script>
+    <link rel="stylesheet" href="../css/animations.css">
   </head>
   <body class="h-screen w-screen m-0 p-0 flex flex-col overflow-x-hidden">
-    <div class="relative h-screen w-screen overflow-hidden">
-      <!-- Video Background -->
+    <div class="relative h-screen w-screen overflow-hidden" data-animate-section>
+      <!-- Video Background with Overlay -->
       <video
         class="absolute top-0 left-0 w-full h-full object-cover"
         autoplay
@@ -17,645 +19,769 @@
         muted
         playsinline
       >
-        <source
-          src="https://videos.pexels.com/video-files/7578550/7578550-sd_640_360_30fps.mp4"
-          type="video/mp4"
-        />
+        <source src="https://v.ftcdn.net/10/77/60/60/700_F_1077606010_Ad188v5GmBmFIXBn8t7tIwdN9cizG97Q_ST.mp4" type="video/mp4" />
       </video>
 
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <!-- Hero Content -->
+      <div class="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
+        <!-- Welcome Text -->
+        <p class="text-lg md:text-xl tracking-wider mb-4 text-[#E4A853]" data-animate-from="up" data-delay="200">
+          WELCOME TO DIGITAL MARBLEX
+        </p>
 
-      <!-- Content -->
-      <div class="relative h-full w-full flex flex-col justify-end">
-        <div class="w-full px-4 sm:px-6 lg:px-8">
-          <div
-            class="w-full animate-fade-up bg-blue-900 bg-opacity-90 text-white flex flex-col sm:flex-row items-center sm:justify-around text-center sm:text-left py-4 sm:py-8 lg:py-12 gap-y-4 sm:gap-y-6"
-          >
-            <h1
-              class="text-lg sm:text-2xl lg:text-5xl font-bold leading-tight tracking-tight px-4 sm:px-0"
-            >
-              DECADES OF EXPERTISE IN<br />
-              STONE CARE SOLUTIONS.
-            </h1>
-            <div class="px-4 sm:px-0">
-              <a
-                href="/pages/solutions.html"
-                class="inline-block bg-white text-blue-900 px-6 py-3 text-sm sm:text-base font-semibold rounded hover:bg-gray-100 transition-colors duration-300"
-              >
-                Explore Solutions
-              </a>
-            </div>
-          </div>
+        <!-- Main Heading -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight" data-animate-from="up" data-delay="400">
+          High Performance<br />Natural Stone Panels
+        </h1>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6" data-animate-from="up" data-delay="600">
+          <a href="#" class="px-8 py-3 bg-[#E4A853] text-white text-lg font-semibold hover:bg-[#c89447] transition-colors duration-300 flex items-center gap-2">
+            READ MORE
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#" class="px-8 py-3 bg-white text-black text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center gap-2">
+            GET IN TOUCH
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-  </body>
-</html>
 
-<!-- Products Section -->
-<div class="bg-white py-16 min-h-screen">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col lg:flex-row gap-12">
-      <!-- Left Sidebar -->
-      <div class="lg:w-1/3 border-r border-gray-200 pr-12">
-        <div class="mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">
-            TAILORED STONE SOLUTIONS
-          </h2>
-          <a
-            href="#"
-            class="group relative inline-flex items-center bg-gray-100 text-black px-8 py-4 text-lg font-semibold overflow-hidden"
-          >
-            <span class="relative z-10">EXPLORE ALL</span>
+
+    <!-- Production Process Section -->
+    <div class="bg-white py-24" data-animate-section>
+      <div class="container mx-auto px-4">
+        <!-- Section Title -->
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-20" data-animate-from="up" data-delay="200">
+          INSIDE OUR PRODUCTION PROCESS
+        </h2>
+
+        <!-- Process Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
+        >
+          <!-- Left Column -->
+          <div class="space-y-16" data-animate-from="left" data-delay="400">
+            <!-- Step 1 -->
+            <div>
+              <h3 class="text-2xl font-bold mb-4">1. ANALYSING THE PROBLEM</h3>
+              <p class="text-gray-600">
+                Commitment to solve every problem of stone.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div>
+              <h3 class="text-2xl font-bold mb-4">2. R&D</h3>
+              <p class="text-gray-600">
+                We have a dedicated R&D for every new stone challenge.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div>
+              <h3 class="text-2xl font-bold mb-4">3. TESTING / TRIALS</h3>
+              <p class="text-gray-600">
+                We have a full fledged laboratory in Italy where trials and
+                testing are regularly done.
+              </p>
+            </div>
+          </div>
+
+          <!-- Center Column (Image) -->
+          <div class="flex items-center justify-center">
             <div
-              class="absolute left-0 w-0 h-full bg-black group-hover:w-full transition-all duration-300 ease-in-out -z-0"
-            ></div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 ml-2 relative z-10 group-hover:text-white transition-colors duration-300"
-              viewBox="0 0 20 20"
-              fill="currentColor"
+              class="w-full aspect-square border-2 border-gray-300 rounded-lg"
             >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <div class="mt-16 pb-8 border-t border-gray-200 pt-8">
-          <h3 class="text-4xl md:text-5xl font-bold leading-tight">
-            PRODUCTS<br />
-            CRAFTED FOR<br />
-            EXCELLENCE
-          </h3>
-        </div>
-      </div>
-
-      <!-- Right Carousel -->
-      <div class="lg:w-2/3 relative">
-        <div class="carousel-container overflow-hidden relative">
-          <div
-            class="carousel-track flex transition-transform duration-500 ease-out"
-          >
-            <!-- Carousel Items -->
-            <div class="carousel-item w-full lg:w-1/3 flex-shrink-0 px-4">
-              <div class="h-full">
-                <div class="relative h-64 mb-4 overflow-hidden">
-                  <img
-                    src="https://th.bing.com/th/id/OIP.nKI-4STgE9ZSoKbdY73CPQHaEO?w=291&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                    alt="Superior Quality Joint Filler Solution"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 class="text-xl font-semibold mt-4">
-                  SUPERIOR QUALITY JOINT FILLER SOLUTION
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item w-full lg:w-1/3 flex-shrink-0 px-4">
-              <div class="h-full">
-                <div class="relative h-64 mb-4 overflow-hidden">
-                  <img
-                    src="https://th.bing.com/th/id/OIP._AJRwN6TyY6ChGEUt9f7aAHaE8?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                    alt="Protection of Luxury and Delicate Floors"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 class="text-xl font-semibold mt-4">
-                  PROTECTION OF LUXURY AND DELICATE FLOORS
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item w-full lg:w-1/3 flex-shrink-0 px-4">
-              <div class="h-full">
-                <div class="relative h-64 mb-4 overflow-hidden">
-                  <img
-                    src="https://th.bing.com/th/id/OIP.RCW8WN7FWss0MwPfdDO77gHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                    alt="Daily Maintenance of Marble Floors"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 class="text-xl font-semibold mt-4">
-                  DAILY MAINTENANCE OF MARBLE FLOORS
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item w-full lg:w-1/3 flex-shrink-0 px-4">
-              <div class="h-full">
-                <div class="relative h-64 mb-4 overflow-hidden">
-                  <img
-                    src="https://th.bing.com/th/id/OIP.nKI-4STgE9ZSoKbdY73CPQHaEO?w=291&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                    alt="Advanced Stone Restoration"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 class="text-xl font-semibold mt-4">
-                  ADVANCED STONE RESTORATION
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item w-full lg:w-1/3 flex-shrink-0 px-4">
-              <div class="h-full">
-                <div class="relative h-64 mb-4 overflow-hidden">
-                  <img
-                    src="https://th.bing.com/th/id/OIP._AJRwN6TyY6ChGEUt9f7aAHaE8?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                    alt="Professional Grade Cleaning"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 class="text-xl font-semibold mt-4">
-                  PROFESSIONAL GRADE CLEANING
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item w-full lg:w-1/3 flex-shrink-0 px-4">
-              <div class="h-full">
-                <div class="relative h-64 mb-4 overflow-hidden">
-                  <img
-                    src="https://th.bing.com/th/id/OIP.RCW8WN7FWss0MwPfdDO77gHaE8?w=253&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                    alt="Daily Maintenance of Marble Floors"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 class="text-xl font-semibold mt-4">
-                  DAILY MAINTENANCE OF MARBLE FLOORS
-                </h4>
-              </div>
+              <!-- Placeholder for center image or content -->
             </div>
           </div>
 
-          <!-- Carousel Indicators -->
-          <div
-            class="carousel-indicators absolute -bottom-6 left-0 right-0 flex justify-center gap-2 pb-4"
-          >
-            <button
-              class="h-2 w-2 rounded-full bg-indigo-900"
-              data-index="0"
-            ></button>
-            <button
-              class="h-2 w-2 rounded-full bg-gray-300"
-              data-index="1"
-            ></button>
-            <button
-              class="h-2 w-2 rounded-full bg-gray-300"
-              data-index="2"
-            ></button>
-            <button
-              class="h-2 w-2 rounded-full bg-gray-300"
-              data-index="3"
-            ></button>
-            <button
-              class="h-2 w-2 rounded-full bg-gray-300"
-              data-index="4"
-            ></button>
-            <button
-              class="h-2 w-2 rounded-full bg-gray-300"
-              data-index="5"
-            ></button>
+          <!-- Right Column -->
+          <div class="space-y-16" data-animate-from="right" data-delay="800">
+            <!-- Step 4 -->
+            <div>
+              <h3 class="text-2xl font-bold mb-4">4. MANUFACTURING</h3>
+              <p class="text-gray-600">
+                We have Italian manufacturing technology for the finest quality.
+              </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div>
+              <h3 class="text-2xl font-bold mb-4">5. QUALITY CHECKING</h3>
+              <p class="text-gray-600">
+                We put immense value on industry certification after testing and
+                passing it, before it reaches the market.
+              </p>
+            </div>
+
+            <!-- Step 6 -->
+            <div>
+              <h3 class="text-2xl font-bold mb-4">6. FINISHED GOODS</h3>
+              <p class="text-gray-600">
+                Producing the product with quality packaging.
+              </p>
+            </div>
           </div>
-
-          <!-- Navigation Buttons -->
-          <button
-            class="prev-button absolute left-2 top-1/3 -translate-y-1/2 bg-indigo-900 text-white p-3 rounded-full z-10 focus:outline-none w-10 h-10 flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            class="next-button absolute right-2 top-1/3 -translate-y-1/2 bg-indigo-900 text-white p-3 rounded-full z-10 focus:outline-none w-10 h-10 flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Products Showcase Section -->
-<div class="bg-white">
-  <div class="container mx-auto">
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-20"
-    >
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/08/ProteK-.jpg"
-            alt="Dush Protek+"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://th.bing.com/th/id/OIP.LrZKPkl3E49SP0moPU9JxQHaE7?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-            alt="Dush Mastics"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/08/Protek-White-Marble.jpg"
-            alt="Dush Apex"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/08/Mastics.jpg"
-            alt="Dush Protek+"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://ts3.mm.bing.net/th?id=OIP.wKHvkiP16Hu3-YvP5ZijYAHaEO&pid=15.1"
-            alt="Dush Mastics"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/08/Before-After.jpg"
-            alt="Dush Apex"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/06/Apex.jpg"
-            alt="Dush Protek+"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://ts3.mm.bing.net/th?id=OIP.wKHvkiP16Hu3-YvP5ZijYAHaEO&pid=15.1"
-            alt="Dush Mastics"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <div class="aspect-square flex items-center justify-center">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/09/Before-After.jpg"
-            alt="Dush Apex"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="mt-20 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8">
-        DISCOVER OUR COMPLETE<br />
-        RANGE OF PRODUCTS
-      </h2>
-      <a
-        href="#"
-        class="group relative inline-flex items-center bg-gray-100 text-black px-8 py-4 text-lg font-semibold overflow-hidden"
-      >
-        <span class="relative z-10">VIEW ALL PRODUCTS</span>
-        <div
-          class="absolute left-0 w-0 h-full bg-black group-hover:w-full transition-all duration-300 ease-in-out -z-0"
-        ></div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 ml-2 relative z-10 group-hover:text-white transition-colors duration-300"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Production Process Section -->
-<div class="bg-white py-24">
-  <div class="container mx-auto px-4">
-    <!-- Section Title -->
-    <h2 class="text-4xl md:text-5xl font-bold text-center mb-20">
-      INSIDE OUR PRODUCTION PROCESS
-    </h2>
-
-    <!-- Process Grid -->
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
-    >
-      <!-- Left Column -->
-      <div class="space-y-16">
-        <!-- Step 1 -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4">1. ANALYSING THE PROBLEM</h3>
-          <p class="text-gray-600">
-            Commitment to solve every problem of stone.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4">2. R&D</h3>
-          <p class="text-gray-600">
-            We have a dedicated R&D for every new stone challenge.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4">3. TESTING / TRIALS</h3>
-          <p class="text-gray-600">
-            We have a full fledged laboratory in Italy where trials and
-            testing are regularly done.
-          </p>
-        </div>
-      </div>
-
-      <!-- Center Column (Image) -->
-      <div class="flex items-center justify-center">
-        <div
-          class="w-full aspect-square border-2 border-gray-300 rounded-lg"
-        >
-          <!-- Placeholder for center image or content -->
-        </div>
-      </div>
-
-      <!-- Right Column -->
-      <div class="space-y-16">
-        <!-- Step 4 -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4">4. MANUFACTURING</h3>
-          <p class="text-gray-600">
-            We have Italian manufacturing technology for the finest quality.
-          </p>
-        </div>
-
-        <!-- Step 5 -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4">5. QUALITY CHECKING</h3>
-          <p class="text-gray-600">
-            We put immense value on industry certification after testing and
-            passing it, before it reaches the market.
-          </p>
-        </div>
-
-        <!-- Step 6 -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4">6. FINISHED GOODS</h3>
-          <p class="text-gray-600">
-            Producing the product with quality packaging.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Call to Action Section -->
-<div class="bg-white py-24">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col lg:flex-row items-center">
-      <!-- Left Image Column -->
-      <div class="lg:w-1/2">
-        <div class="relative h-[600px]">
-          <img
-            src="https://dushproducts.com/wp-content/uploads/2024/07/432960.jpg"
-            alt="Stone samples and color swatches"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      <!-- Right Content Column -->
-      <div class="lg:w-1/2 lg:pl-16 mt-12 lg:mt-0">
-        <div class="max-w-xl">
-          <!-- Subheading -->
-          <p class="text-gray-600 text-lg mb-4">/ Become a Customer</p>
-
-          <!-- Main Heading -->
-          <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-12">
-            READY TO TAKE<br />
-            THE NEXT STEP?<br />
-            ACT NOW!
-          </h2>
-
-          <!-- CTA Button -->
-          <a
-            href="#"
-            class="group inline-flex items-center text-lg font-semibold"
-          >
-            <span
-              class="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black hover:after:bg-gray-600 after:transition-colors"
-            >
-              LET'S TALK
+    <!-- What We Offer Section -->
+    <section class="py-20 bg-white relative">
+      <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="flex justify-between items-start mb-16">
+          <div>
+            <span class="text-[#E4A853] text-lg font-medium inline-flex items-center gap-2 mb-4">
+              <span class="w-8 h-[1px] bg-[#E4A853]"></span>
+              WHAT WE OFFER
             </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
+            <h2 class="text-4xl md:text-5xl font-bold text-[#1f2937]">
+              Provides Best Services
+            </h2>
+          </div>
+          <a href="#" class="hidden md:inline-flex items-center gap-2 px-8 py-4 bg-[#1f2937] text-white hover:bg-[#374151] transition-colors duration-300">
+            READ MORE
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </a>
         </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Carpets & Rugs -->
+          <div class="bg-white p-8 group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 bg-[#E4A853] rounded-full opacity-20 absolute"></div>
+              <div class="relative z-10">
+                <svg class="w-12 h-12 text-[#1f2937]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 12h24v24H12z" />
+                  <path d="M18 18h12v12H18z" />
+                </svg>
+              </div>
+              <div class="w-12 h-12 absolute top-0 right-0 opacity-10">
+                <svg class="w-full h-full text-[#1f2937]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 12h24v24H12z" />
+                  <path d="M18 18h12v12H18z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-[#1f2937] mb-4">Carpets & Rugs</h3>
+            <p class="text-gray-600 mb-6">There are many variations of passages of Lorem Ipsum available majority</p>
+            <div class="inline-flex items-center text-[#E4A853] group-hover:translate-x-2 transition-transform duration-300">
+              <span class="w-8 h-[1px] bg-[#E4A853] mr-2"></span>
+              <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 8h14M8 1l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Laminate Flooring -->
+          <div class="bg-white p-8 group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 bg-[#E4A853] rounded-full opacity-20 absolute"></div>
+              <div class="relative z-10">
+                <svg class="w-12 h-12 text-[#1f2937]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 12h12v12H12zM24 24h12v12H24z" />
+                </svg>
+              </div>
+              <div class="w-12 h-12 absolute top-0 right-0 opacity-10">
+                <svg class="w-12 h-12 text-[#1f2937]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 12h12v12H12zM24 24h12v12H24z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-[#1f2937] mb-4">Laminate Flooring</h3>
+            <p class="text-gray-600 mb-6">There are many variations of passages of Lorem Ipsum available majority</p>
+            <div class="inline-flex items-center text-[#E4A853] group-hover:translate-x-2 transition-transform duration-300">
+              <span class="w-8 h-[1px] bg-[#E4A853] mr-2"></span>
+              <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 8h14M8 1l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Vinyl Flooring -->
+          <div class="bg-white p-8 group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 bg-[#E4A853] rounded-full opacity-20 absolute"></div>
+              <div class="relative z-10">
+                <svg class="w-12 h-12 text-[#1f2937]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 12h24v24H12z" stroke-dasharray="4 4"/>
+                </svg>
+              </div>
+              <div class="w-12 h-12 absolute top-0 right-0 opacity-10">
+                <svg class="w-12 h-12 text-[#1f2937]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 12h24v24H12z" stroke-dasharray="4 4"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-[#1f2937] mb-4">Vinyl Flooring</h3>
+            <p class="text-gray-600 mb-6">There are many variations of passages of Lorem Ipsum available majority</p>
+            <div class="inline-flex items-center text-[#E4A853] group-hover:translate-x-2 transition-transform duration-300">
+              <span class="w-8 h-[1px] bg-[#E4A853] mr-2"></span>
+              <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 8h14M8 1l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<style>
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
+    <!-- Discover Our Creation Section -->
+    <section class="py-20 bg-white" data-animate-section>
+      <div class="container mx-auto px-4 py-16">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start mb-16">
+          <div class="mb-8 md:mb-0" data-animate-from="left" data-delay="200">
+            <span class="text-[#E4A853] text-lg font-medium inline-flex items-center gap-2 mb-4">
+              <span class="w-8 h-[1px] bg-[#E4A853]"></span>
+              CHOOSE YOUR STONE
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold text-[#1f2937]">
+              Discover Our Creation
+            </h2>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-[#1f2937] text-white hover:bg-[#374151] transition-colors duration-300" data-animate-from="right" data-delay="400">
+            VIEW MORE
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+    
+        <!-- Carousel Container -->
+        <div id="marble-carousel" class="relative mb-10" data-animate-from="up" data-delay="600">
+          <!-- Navigation Buttons -->
+          <button class="prev-button absolute top-1/2 left-4 z-10 -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center focus:outline-none transform transition hover:scale-110 hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <button class="next-button absolute top-1/2 right-4 z-10 -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center focus:outline-none transform transition hover:scale-110 hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          
+          <!-- Carousel Wrapper -->
+          <div class="overflow-hidden">
+            <!-- Carousel Track -->
+            <div class="carousel-track flex transition-transform duration-700 ease-out">
+              <!-- Carousel Items -->
+              <div class="carousel-item min-w-full md:min-w-1/2 lg:min-w-1/3 px-3 opacity-0" style="animation: fadeInUp 0.8s forwards 0.1s;">
+                <div class="group cursor-pointer overflow-hidden">
+                  <div class="relative overflow-hidden rounded-lg shadow-md">
+                    <img src="https://peacefulqode.co.in/themes/marblex/html/images/gallery/8.jpg" alt="Marble Kitchen" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div class="pt-4">
+                    <h3 class="text-xl font-semibold">Emperador Dark</h3>
+                    <p class="text-gray-600">Premium Marble</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="carousel-item min-w-full md:min-w-1/2 lg:min-w-1/3 px-3 opacity-0" style="animation: fadeInUp 0.8s forwards 0.2s;">
+                <div class="group cursor-pointer overflow-hidden">
+                  <div class="relative overflow-hidden rounded-lg shadow-md">
+                    <img src="https://peacefulqode.co.in/themes/marblex/html/images/gallery/9.jpg" alt="Marble Sink" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div class="pt-4">
+                    <h3 class="text-xl font-semibold">Calacatta Gold</h3>
+                    <p class="text-gray-600">Luxury Marble</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="carousel-item min-w-full md:min-w-1/2 lg:min-w-1/3 px-3 opacity-0" style="animation: fadeInUp 0.8s forwards 0.3s;">
+                <div class="group cursor-pointer overflow-hidden">
+                  <div class="relative overflow-hidden rounded-lg shadow-md">
+                    <img src="https://peacefulqode.co.in/themes/marblex/html/images/gallery/10.jpg" alt="Marble Wall" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div class="pt-4">
+                    <h3 class="text-xl font-semibold">Statuario</h3>
+                    <p class="text-gray-600">Classic Marble</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="carousel-item min-w-full md:min-w-1/2 lg:min-w-1/3 px-3 opacity-0" style="animation: fadeInUp 0.8s forwards 0.4s;">
+                <div class="group cursor-pointer overflow-hidden">
+                  <div class="relative overflow-hidden rounded-lg shadow-md">
+                    <img src="https://peacefulqode.co.in/themes/marblex/html/images/gallery/8.jpg" alt="Marble Counter" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div class="pt-4">
+                    <h3 class="text-xl font-semibold">Bianco Carrara</h3>
+                    <p class="text-gray-600">Italian Marble</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="carousel-item min-w-full md:min-w-1/2 lg:min-w-1/3 px-3 opacity-0" style="animation: fadeInUp 0.8s forwards 0.5s;">
+                <div class="group cursor-pointer overflow-hidden">
+                  <div class="relative overflow-hidden rounded-lg shadow-md">
+                    <img src="https://peacefulqode.co.in/themes/marblex/html/images/gallery/9.jpg" alt="Marble Bathroom" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div class="pt-4">
+                    <h3 class="text-xl font-semibold">Crema Marfil</h3>
+                    <p class="text-gray-600">Spanish Marble</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+    <!-- Choose Your Stone Section -->
+    <section class="py-20 bg-[#1f2937] relative">
+      <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="flex justify-between items-start mb-16">
+          <div>
+            <span class="text-[#E4A853] text-lg font-medium inline-flex items-center gap-2 mb-4">
+              <span class="w-8 h-[1px] bg-[#E4A853]"></span>
+              CHOOSE YOUR STONE
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white">
+              Showroom With Selection
+            </h2>
+          </div>
+          <a href="#" class="hidden md:inline-flex items-center gap-2 px-8 py-4 bg-[#E4A853] text-white hover:bg-[#c89447] transition-colors duration-300">
+            READ MORE
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stone Carousel -->
+        <div class="stone-carousel overflow-hidden">
+          <div class="flex gap-6 transition-transform duration-500 ease-out">
+            <!-- Stone Items -->
+            <div class="stone-item flex flex-col items-center">
+              <div class="w-48 h-48 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 transform transition-transform hover:scale-105">
+                <img src="https://peacefulqode.co.in/themes/marblex/html/images/stone/3.png" alt="Travertine" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-2xl font-semibold text-white">Travertine</h3>
+            </div>
+
+            <div class="stone-item flex flex-col items-center">
+              <div class="w-48 h-48 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 transform transition-transform hover:scale-105">
+                <img src="https://peacefulqode.co.in/themes/marblex/html/images/stone/6.png" alt="Onyx" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-2xl font-semibold text-white">Onyx</h3>
+            </div>
+
+            <div class="stone-item flex flex-col items-center">
+              <div class="w-48 h-48 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 transform transition-transform hover:scale-105">
+                <img src="https://peacefulqode.co.in/themes/marblex/html/images/stone/7.png" alt="Marble" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-2xl font-semibold text-white">Marble</h3>
+            </div>
+
+            <div class="stone-item flex flex-col items-center">
+              <div class="w-48 h-48 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 transform transition-transform hover:scale-105">
+                <img src="https://peacefulqode.co.in/themes/marblex/html/images/stone/2.png" alt="Limestone" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-2xl font-semibold text-white">Limestone</h3>
+            </div>
+
+            <div class="stone-item flex flex-col items-center">
+              <div class="w-48 h-48 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 transform transition-transform hover:scale-105">
+                <img src="https://peacefulqode.co.in/themes/marblex/html/images/stone/4.png" alt="Onyx" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-2xl font-semibold text-white">Onyx</h3>
+            </div>
+
+            <div class="stone-item flex flex-col items-center">
+              <div class="w-48 h-48 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 transform transition-transform hover:scale-105">
+                <img src="https://peacefulqode.co.in/themes/marblex/html/images/stone/4.png" alt="Quartz" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-2xl font-semibold text-white">Quartz</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="flex justify-center gap-3 mt-12">
+          <button class="w-8 h-1 bg-[#E4A853]" aria-label="Slide 1"></button>
+          <button class="w-8 h-1 bg-gray-600" aria-label="Slide 2"></button>
+        </div>
+      </div>
+
+      <!-- Background Pattern/Texture -->
+      <div class="absolute inset-0 bg-[url('path/to/texture.png')] opacity-5 mix-blend-overlay"></div>
+    </section>
+
+    <!-- Visit Our Marble & Granite Display Warehouse Section -->
+    <section class="py-20 bg-white" data-animate-section>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Left Side - Marble Slab Image -->
+          <div class="w-full lg:w-1/2" data-animate-from="left" data-delay="200">
+            <div class="relative overflow-hidden">
+              <img src="https://peacefulqode.co.in/themes/marblex/html/images/about-us/marble.png" alt="Marble Slab" class="w-full h-auto object-cover rounded-sm">
+            </div>
+          </div>
+          
+          <!-- Right Side - Content -->
+          <div class="w-full lg:w-1/2" data-animate-from="right" data-delay="400">
+            <!-- Section Header -->
+            <span class="text-[#E4A853] text-lg font-medium inline-flex items-center gap-2 mb-4">
+              <span class="w-8 h-[1px] bg-[#E4A853]"></span>
+              ABOUT US
+            </span>
+            
+            <h2 class="text-4xl md:text-5xl font-bold text-[#1f2937] mb-6">
+              Visit Our Marble & Granite Display Warehouse
+            </h2>
+            
+            <p class="text-gray-600 mb-12">
+              At Marblex stone, we offer quality stone products in the form of tiles and slabs selected from all over the world to enhance your home project.
+            </p>
+            
+            <!-- Divider Line -->
+            <div class="w-full h-px bg-gray-200 mb-12"></div>
+            
+            <!-- Two Column Features -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+              <!-- Left Column -->
+              <div>
+                <h3 class="text-2xl font-bold text-[#1f2937] mb-6">Marble At A Glance</h3>
+                
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">More Expensive</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Red Alicante Marble</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Less Maintenance</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Very Durable</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Right Column -->
+              <div>
+                <h3 class="text-2xl font-bold text-[#1f2937] mb-6">Marble Slab Creamery</h3>
+                
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Elegant Vein Patterns</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Heat-Resistant</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Stargate Gold Marble</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#E4A853] mr-3 mt-1.5">●</span>
+                    <span class="text-gray-600">Red Beauty Marble</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="relative bg-[#1f2937] py-20" data-animate-section>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Left Side - Form -->
+          <div class="w-full lg:w-1/2" data-animate-from="left" data-delay="200">
+            <div class="max-w-xl">
+              <!-- Section Header -->
+              <span class="text-[#E4A853] text-lg font-medium inline-flex items-center gap-2 mb-4">
+                <span class="w-8 h-[1px] bg-[#E4A853]"></span>
+                APPOINTMENT
+              </span>
+              
+              <h2 class="text-4xl md:text-5xl font-bold text-white mb-12">
+                Get A Free Quote
+              </h2>
+
+              <!-- Contact Form -->
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- Name Input -->
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Your Name" 
+                      class="w-full px-4 py-3 bg-white/10 text-white placeholder-gray-400 border border-gray-700 focus:border-[#E4A853] focus:ring-1 focus:ring-[#E4A853] outline-none transition-colors duration-300 rounded-sm"
+                    >
+                  </div>
+
+                  <!-- Email Input -->
+                  <div>
+                    <input 
+                      type="email" 
+                      placeholder="Email" 
+                      class="w-full px-4 py-3 bg-white/10 text-white placeholder-gray-400 border border-gray-700 focus:border-[#E4A853] focus:ring-1 focus:ring-[#E4A853] outline-none transition-colors duration-300 rounded-sm"
+                    >
+                  </div>
+
+                  <!-- Phone Input -->
+                  <div>
+                    <input 
+                      type="tel" 
+                      placeholder="Phone Number" 
+                      class="w-full px-4 py-3 bg-white/10 text-white placeholder-gray-400 border border-gray-700 focus:border-[#E4A853] focus:ring-1 focus:ring-[#E4A853] outline-none transition-colors duration-300 rounded-sm"
+                    >
+                  </div>
+
+                  <!-- Project Scope Input -->
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Project Scope" 
+                      class="w-full px-4 py-3 bg-white/10 text-white placeholder-gray-400 border border-gray-700 focus:border-[#E4A853] focus:ring-1 focus:ring-[#E4A853] outline-none transition-colors duration-300 rounded-sm"
+                    >
+                  </div>
+                </div>
+
+                <!-- Message Input -->
+                <div>
+                  <textarea 
+                    placeholder="Write Your Message" 
+                    rows="4" 
+                    class="w-full px-4 py-3 bg-white/10 text-white placeholder-gray-400 border border-gray-700 focus:border-[#E4A853] focus:ring-1 focus:ring-[#E4A853] outline-none transition-colors duration-300 rounded-sm resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                  <button 
+                    type="submit" 
+                    class="px-8 py-4 bg-[#E4A853] text-white font-medium hover:bg-[#c89447] transition-colors duration-300 rounded-sm"
+                  >
+                    SEND NOW
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Side - Image -->
+          <div class="w-full lg:w-1/2" data-animate-from="right" data-delay="400">
+            <div class="h-full relative">
+              <img 
+                src="https://peacefulqode.co.in/themes/marblex/html/images/from-img.jpg" 
+                alt="Marble Slabs" 
+                class="w-full h-full object-cover rounded-sm"
+              >
+              <!-- Optional Overlay -->
+              <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 bg-[url('path/to/pattern.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
+    </section>
+
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-up {
+        animation: fadeUp 1s ease-out forwards;
+      }
+
+      .group:hover span {
+        color: white;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      @media (max-width: 1023px) {
+        .carousel-item {
+          width: 100%;
+        }
+      }
+
+      /* Additional styles for Production Process section */
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          gap-y: 2rem;
+        }
+
+        .space-y-16 > * + * {
+          margin-top: 2rem;
+        }
+      }
+
+      /* Animation for process steps */
+      .grid > div {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Stagger animation for each column */
+      .grid > div:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .grid > div:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .grid > div:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      /* Hover effects */
+      .grid > div > div {
+        transition: transform 0.3s ease;
+      }
+
+      .grid > div > div:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Animation for content */
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Apply animations */
+      .max-w-xl > * {
+        opacity: 0;
+        animation: fadeInRight 0.8s ease-out forwards;
+      }
+
+      .max-w-xl > :nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .max-w-xl > :nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .max-w-xl > :nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      .group:hover svg {
+        transform: translateX(8px);
+      }
+
+      @media (max-width: 1024px) {
+        .max-w-xl {
+          padding: 0 1rem;
+        }
+
+        h2.text-5xl {
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .relative.h-[600px] {
+          height: 400px;
+        }
+      }
+
+      @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-up {
-    animation: fadeUp 1s ease-out forwards;
-  }
-
-  .group:hover span {
-    color: white;
-    transition: color 0.3s ease-in-out;
-  }
-
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  @media (max-width: 1023px) {
-    .carousel-item {
-      width: 100%;
-    }
-  }
-
-  /* Additional styles for Production Process section */
-  .text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-  }
-
-  @media (max-width: 768px) {
-    .grid {
-      gap-y: 2rem;
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s forwards;
     }
 
-    .space-y-16 > * + * {
-      margin-top: 2rem;
-    }
-  }
-
-  /* Animation for process steps */
-  .grid > div {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Stagger animation for each column */
-  .grid > div:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .grid > div:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .grid > div:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  /* Hover effects */
-  .grid > div > div {
-    transition: transform 0.3s ease;
-  }
-
-  .grid > div > div:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Animation for content */
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Apply animations */
-  .max-w-xl > * {
-    opacity: 0;
-    animation: fadeInRight 0.8s ease-out forwards;
-  }
-
-  .max-w-xl > :nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .max-w-xl > :nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .max-w-xl > :nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  .group:hover svg {
-    transform: translateX(8px);
-  }
-
-  @media (max-width: 1024px) {
-    .max-w-xl {
-      padding: 0 1rem;
+    .stone-carousel {
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
 
-    h2.text-5xl {
-      font-size: 2.5rem;
-      line-height: 1.2;
+    .stone-item {
+      flex: 0 0 auto;
     }
-  }
 
-  @media (max-width: 768px) {
-    .relative.h-[600px] {
-      height: 400px;
+    @media (max-width: 768px) {
+      .stone-carousel {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
     }
-  }
-</style>
-</body>
+    </style>
+  </body>
 </html>

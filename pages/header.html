@@ -1,59 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Header</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <header class="bg-white border-b border-gray-200">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16 sm:h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="/" class="flex items-center">
-                        <img src="https://dushproducts.com/wp-content/uploads/2023/07/dush-logo-med.png" alt="DUSH" class="h-8 sm:h-12">
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-4 sm:space-x-8">
-                    <a href="/index.html" class="text-sm sm:text-base text-gray-900 hover:text-blue-900 font-medium">HOME</a>
-                    <a href="/pages/company.html" class="text-sm sm:text-base text-gray-900 hover:text-blue-900 font-medium">COMPANY</a>
-                    <a href="/pages/solutions.html" class="text-sm sm:text-base text-gray-900 hover:text-blue-900 font-medium">SOLUTIONS</a>
-                    <a href="/pages/marblesAndChemicals.html" class="text-sm sm:text-base text-gray-900 hover:text-blue-900 font-medium">MARBLE CHEMICALS</a>
-                    <a href="/pages/constructionsChemicals.html" class="text-sm sm:text-base text-gray-900 hover:text-blue-900 font-medium">CONSTRUCTION CHEMICALS</a>
-                    <a href="/pages/overlayCoating.html" class="text-sm sm:text-base text-gray-900 hover:text-blue-900 font-medium">OVERLAY COATING</a>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div class="lg:hidden hidden">
-            <nav class="px-4 py-3 space-y-2 bg-gray-50">
-                <a href="/index.html" class="block text-gray-900 hover:text-blue-900 font-medium py-2">HOME</a>
-                <a href="/pages/company.html" class="block text-gray-900 hover:text-blue-900 font-medium py-2">COMPANY</a>
-                <a href="/pages/solutions.html" class="block text-gray-900 hover:text-blue-900 font-medium py-2">SOLUTIONS</a>
-                <a href="/marble-chemicals" class="block text-gray-900 hover:text-blue-900 font-medium py-2">MARBLE CHEMICALS</a>
-            </nav>
-        </div>
-    </header>
-</body>
-</html>
-  
     <script>
-        // Mobile menu toggle functionality
-        const mobileMenuButton = document.querySelector('button.lg\\:hidden');
-        const mobileMenu = document.querySelector('div.lg\\:hidden');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#1f2937', // Dark gray for primary text
+              'secondary': '#4b5563', // Medium gray for secondary text
+              'accent': '#374151', // Dark gray for buttons/active states
+              'hover': '#6b7280', // Light gray for hover states
+            }
+          }
+        }
+      }
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="fixed w-full bg-white shadow-md z-50">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="/" class="flex items-center gap-2">
+              <img
+                src="https://peacefulqode.co.in/themes/marblex/html/images/Logo/logo.png"
+                alt="DUSH"
+                class="h-10 w-16"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-8">
+            <a
+              href="/index.html"
+              class="text-sm font-medium text-secondary hover:text-primary transition-colors relative
+                      after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] 
+                      after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 
+                      after:transition-transform after:duration-300"
+              >HOME</a
+            >
+            <a
+              href="/pages/company.html"
+              class="text-sm font-medium text-secondary hover:text-primary transition-colors relative
+                      after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] 
+                      after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 
+                      after:transition-transform after:duration-300"
+              >COMPANY</a
+            >
+            <a
+              href="/pages/solutions.html"
+              class="text-sm font-medium text-secondary hover:text-primary transition-colors relative
+                      after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] 
+                      after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 
+                      after:transition-transform after:duration-300"
+              >SOLUTIONS</a
+            >
+            <a
+              href="/pages/marblesAndChemicals.html"
+              class="text-sm font-medium text-secondary hover:text-primary transition-colors relative
+                      after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] 
+                      after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 
+                      after:transition-transform after:duration-300"
+              >MARBLE CHEMICALS</a
+            >
+            <a
+              href="/pages/constructionsChemicals.html"
+              class="text-sm font-medium text-secondary hover:text-primary transition-colors relative
+                      after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] 
+                      after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 
+                      after:transition-transform after:duration-300"
+              >CONSTRUCTION CHEMICALS</a
+            >
+            <a
+              href="/pages/overlayCoating.html"
+              class="text-sm font-medium text-secondary hover:text-primary transition-colors relative
+                      after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] 
+                      after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 
+                      after:transition-transform after:duration-300"
+              >OVERLAY COATING</a
+            >
+            <a
+              href="/pages/quote.html"
+              class="ml-4 px-6 py-3 bg-accent text-white text-sm font-medium 
+                      hover:bg-hover transition-colors duration-300 flex items-center gap-2"
+              >GET QUOTE
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="lg:hidden text-primary hover:text-hover focus:outline-none"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="lg:hidden hidden bg-white border-t border-gray-100">
+        <nav class="container mx-auto px-4 py-4 space-y-4">
+          <a
+            href="/index.html"
+            class="block text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >HOME</a
+          >
+          <a
+            href="/pages/company.html"
+            class="block text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >COMPANY</a
+          >
+          <a
+            href="/pages/solutions.html"
+            class="block text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >SOLUTIONS</a
+          >
+          <a
+            href="/pages/marblesAndChemicals.html"
+            class="block text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >MARBLE CHEMICALS</a
+          >
+          <a
+            href="/pages/constructionsChemicals.html"
+            class="block text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >CONSTRUCTION CHEMICALS</a
+          >
+          <a
+            href="/pages/overlayCoating.html"
+            class="block text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >OVERLAY COATING</a
+          >
+          <a
+            href="/pages/quote.html"
+            class="block px-6 py-3 bg-accent text-white text-sm font-medium 
+                    hover:bg-hover transition-colors duration-300"
+            >GET QUOTE</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Spacer -->
+    <div class="h-20"></div>
+  </body>
+</html>
+
+<script>
+  const mobileMenuButton = document.querySelector("button.lg\\:hidden");
+  const mobileMenu = document.querySelector("div.lg\\:hidden");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<style>
+  /* Active state styling */
+  .text-primary.after\:scale-x-100::after {
+    transform: scaleX(1);
+    background-color: #1f2937;
+  }
+</style>

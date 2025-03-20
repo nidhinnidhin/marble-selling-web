@@ -3,315 +3,175 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Company - DUSH</title>
+    <title>Company - Marblex</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../script/animations.js"></script>
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
-  <body>
-    <!-- About Section -->
+  <body class="overflow-x-hidden">
     <div id="header"></div>
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <!-- Section Label -->
-        <div class="mb-4">
-          <span class="text-gray-600 text-lg">/ About</span>
+
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] bg-[#1f2937] overflow-hidden" data-animate-section>
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <img src="../assets/images/marble-pattern.jpg" alt="Marble Pattern" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 h-full flex items-center">
+        <div class="max-w-4xl" data-animate-from="left">
+          <span class="text-[#E4A853] text-lg md:text-xl mb-6 inline-flex items-center">
+            <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+            ABOUT MARBLEX
+          </span>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8">
+            CRAFTING THE FUTURE<br />OF MARBLE
+          </h1>
+          <p class="text-white/70 text-lg md:text-xl max-w-2xl mb-12">
+            Leading the industry with innovative stone solutions and unparalleled expertise in marble craftsmanship.
+          </p>
+          <a href="#about" class="inline-flex items-center px-8 py-4 bg-[#E4A853] text-white font-semibold hover:bg-[#c89447] transition-all duration-300 group">
+            DISCOVER MORE
+            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+          </a>
         </div>
+      </div>
+    </section>
 
-        <!-- Main Heading -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-16">
-          CRAFTING THE FUTURE OF<br />
-          MARBLE
-        </h1>
-
-        <!-- Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white" data-animate-section>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <!-- Left Column -->
-          <div class="lg:col-span-1">
-            <h2 class="text-2xl md:text-3xl font-bold leading-tight mb-8">
-              OUR JOURNEY: A LEGACY OF EXCELLENCE IN STONE CARE SOLUTIONS
+          <div class="lg:col-span-1" data-animate-from="left">
+            <span class="text-[#E4A853] text-lg inline-flex items-center mb-4">
+              <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+              OUR STORY
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+              A LEGACY OF EXCELLENCE IN STONE SOLUTIONS
             </h2>
           </div>
 
-          <!-- Middle Column -->
-          <div class="lg:col-span-1">
-            <p class="text-gray-700 text-lg leading-relaxed">
-              Welcome to DUSH, your premier destination for high-quality stone
-              chemicals. We specialize in ongoing innovation tailored to the
-              ever-evolving character of natural marble and the fast-paced usage
-              demands of the modern world. DUSH represents the premium segment
-              of its parent company, the well-known Italian brand VITO, and
-              excels in addressing challenges posed by marble, granite, natural
-              stone, and quartz.
-            </p>
-          </div>
-
-          <!-- Right Column -->
-          <div class="lg:col-span-1">
-            <p class="text-gray-700 text-lg leading-relaxed">
-              DUSH stands at the forefront of innovation in stone care,
-              continuously evolving to meet the dynamic demands of the modern
-              world. Backed by the legacy of the renowned Italian brand VITO, we
-              pride ourselves on our ability to address any challenge posed by
-              marble, granite, natural stone, and quartz. With a commitment to
-              environmental safety and user satisfaction, our team of experts
-              provides unparalleled support and guidance to ensure optimal
-              results with every application. Join us in elevating your stone
-              surfaces to new heights of beauty and durability. Experience the
-              DUSH difference today.
-            </p>
+          <!-- Right Columns -->
+          <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div data-animate-from="right" data-delay="200">
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Welcome to Marblex, your premier destination for high-quality stone solutions. We specialize in ongoing innovation tailored to the ever-evolving character of natural marble and the fast-paced demands of the modern world.
+              </p>
+            </div>
+            <div data-animate-from="right" data-delay="400">
+              <p class="text-gray-700 text-lg leading-relaxed">
+                With a commitment to environmental safety and user satisfaction, our team of experts provides unparalleled support and guidance to ensure optimal results with every application.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Values Section with Background -->
-    <section class="relative">
-      <!-- Background Image -->
-      <div class="w-full h-[400px] relative">
-        <img
-          src="https://dushproducts.com/wp-content/uploads/2024/09/pikaso_texttoimage_Chemical-Industry-Large.jpeg"
-          alt="Industrial Background"
-          class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/30"></div>
-      </div>
-
-      <!-- Values Cards Container -->
+    <!-- Values Section -->
+    <section class="relative py-24 bg-[#1f2937]" data-animate-section>
       <div class="container mx-auto px-4">
-        <div class="relative -mt-40 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-animate-from="up">
+          <span class="text-[#E4A853] text-lg inline-flex items-center justify-center mb-4">
+            <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+            OUR VALUES
+            <span class="w-8 h-[1px] bg-[#E4A853] ml-3"></span>
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-white">Core Values & Mission</h2>
+        </div>
+
+        <!-- Values Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Excellence Card -->
-          <div
-            class="bg-white p-10 border border-gray-100 shadow-sm transform hover:-translate-y-1 transition-transform duration-300 animate-fadeIn"
-          >
-            <span class="text-gray-600 text-lg mb-6 block"
-              >/ Experience. Transparency. Results.</span
-            >
-            <h2 class="text-4xl font-bold mb-6">EXCELLENCE</h2>
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-all duration-300" data-animate-from="up" data-delay="200">
+            <div class="w-16 h-16 bg-[#E4A853]/10 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-award text-[#E4A853] text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Excellence</h3>
             <p class="text-gray-700">
-              We aim for excellence in all aspects of our business, striving to
-              surpass expectations and set new industry standards.
+              We aim for excellence in all aspects of our business, striving to surpass expectations and set new industry standards.
             </p>
-
-            <div class="mt-56">
-              <h2 class="text-4xl font-bold">CORE VALUES</h2>
-              <p class="text-gray-700 mt-4 max-w-2xl">
-                Our core values not only define us as a company but also reflect
-                the essence of each individual within our organization.
-              </p>
-            </div>
-            <div class="mt-16 duration-300 animate-fadeIn">
-              <img
-                src="../assets/icons/target-icon.svg"
-                alt="Mission"
-                class="w-16 h-16 mb-6"
-              />
-              <h3 class="text-4xl font-bold mb-6">MISSION</h3>
-              <p class="text-gray-700">
-                DUSH revolutionizes stone care with innovative, eco-friendly
-                solutions, redefining industry standards through quality,
-                service, and sustainability.
-              </p>
-            </div>
-          </div>
-
-          <!-- Integrity Card -->
-          <div
-            class="p-10 border bg-white border-gray-100 shadow-sm mt-16 transform hover:-translate-y-1 transition-transform duration-300 animate-fadeIn animation-delay-200 flex flex-col justify-between"
-          >
-            <div>
-              <img
-                src="../assets/icons/integrity-icon.svg"
-                alt="Integrity"
-                class="w-16 h-16 mb-6"
-              />
-              <h2 class="text-4xl font-bold mb-6">INTEGRITY</h2>
-              <p class="text-gray-700">
-                Integrity is paramount at DUSH, guiding our honest, transparent,
-                and accountable approach in every interaction.
-              </p>
-            </div>
-            <div class="duration-300 animate-fadeIn animation-delay-200">
-              <img
-                src="../assets/icons/vision-icon.svg"
-                alt="Vision"
-                class="w-16 h-16 mb-6"
-              />
-              <h3 class="text-4xl font-bold mb-6">VISION</h3>
-              <p class="text-gray-700">
-                At DUSH, we aim to be the global leader in stone care, known for
-                excellence, integrity, and innovation. We empower individuals
-                and businesses to achieve unmatched results in stone surface
-                care.
-              </p>
-            </div>
           </div>
 
           <!-- Innovation Card -->
-          <div
-            class="bg-white p-10 border border-gray-100 shadow-sm mt-32 transform hover:-translate-y-1 transition-transform duration-300 animate-fadeIn animation-delay-400"
-          >
-            <div>
-              <img
-                src="../assets/icons/innovation-icon.svg"
-                alt="Innovation"
-                class="w-16 h-16 mb-6"
-              />
-              <h2 class="text-4xl font-bold mb-6">INNOVATION</h2>
-              <p class="text-gray-700">
-                Innovation drives our success, fostering creativity to pioneer
-                solutions that meet evolving needs and challenge industry norms.
-              </p>
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-all duration-300" data-animate-from="up" data-delay="400">
+            <div class="w-16 h-16 bg-[#E4A853]/10 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-lightbulb text-[#E4A853] text-2xl"></i>
             </div>
-            <div class="mt-28 duration-300 animate-fadeIn animation-delay-400">
-              <img
-                src="../assets/icons/collaborative-icon.svg"
-                alt="Be Collaborative"
-                class="w-16 h-16 mb-6"
-              />
-              <h3 class="text-4xl font-bold mb-6">BE COLLABORATIVE</h3>
-              <p class="text-gray-700">
-                DUSH envisions a world where every stone surface is treated with
-                care, preserving natural elegance for future generations. We
-                aspire to be synonymous with excellence in stone care, trusted
-                worldwide by homeowners, contractors, and industry
-                professionals, creating spaces of enduring beauty and
-                sustainability.
-              </p>
+            <h3 class="text-2xl font-bold mb-4">Innovation</h3>
+            <p class="text-gray-700">
+              Innovation drives our success, fostering creativity to pioneer solutions that meet evolving needs.
+            </p>
+          </div>
+
+          <!-- Integrity Card -->
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-all duration-300" data-animate-from="up" data-delay="600">
+            <div class="w-16 h-16 bg-[#E4A853]/10 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-shield-alt text-[#E4A853] text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Integrity</h3>
+            <p class="text-gray-700">
+              Integrity is paramount at Marblex, guiding our honest and transparent approach in every interaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-24 bg-white" data-animate-section>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Left Content -->
+          <div class="lg:w-1/2" data-animate-from="left">
+            <span class="text-[#E4A853] text-lg inline-flex items-center mb-4">
+              <span class="w-8 h-[1px] bg-[#E4A853] mr-3"></span>
+              OUR MISSION
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">
+              Art of Excellence
+            </h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-8">
+              At Marblex, our mission is to revolutionize the stone care industry by providing innovative solutions that exceed customer expectations. We aim to enhance the beauty and longevity of natural and engineered stone surfaces while prioritizing environmental sustainability and user safety.
+            </p>
+            <a href="#contact" class="inline-flex items-center px-8 py-4 bg-[#1f2937] text-white font-semibold hover:bg-[#E4A853] transition-all duration-300 group">
+              GET IN TOUCH
+              <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Right Image -->
+          <div class="lg:w-1/2" data-animate-from="right">
+            <div class="relative">
+              <img src="https://dushproducts.com/wp-content/uploads/2024/07/man-polish-marble.jpeg" alt="Stone craftsmanship" class="w-full rounded-lg shadow-xl">
+              <div class="absolute -bottom-6 -right-6 bg-[#E4A853] p-6 rounded-lg">
+                <div class="text-white text-center">
+                  <div class="text-4xl font-bold mb-2">25+</div>
+                  <div class="text-sm">Years of Excellence</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="bg-white py-24">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center">
-          <!-- Left Image Column -->
-          <div class="lg:w-1/2">
-            <div class="relative h-[600px]">
-              <img
-                src="https://dushproducts.com/wp-content/uploads/2024/07/man-polish-marble.jpeg"
-                alt="Stone samples and color swatches"
-                class="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          <!-- Right Content Column -->
-          <div class="lg:w-1/2 lg:pl-16 mt-12 lg:mt-0">
-            <div class="max-w-xl">
-              <!-- Subheading -->
-              <p class="text-gray-600 text-lg mb-4">/ Solutions</p>
-
-              <!-- Main Heading -->
-              <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-12">
-                ART OF </br> EXCELLENCE
-              </h2>
-              <div>
-                <p class="text-gray-600">
-                    At DUSH, our mission is to revolutionize the stone care industry by providing innovative solutions that exceed customer expectations. We aim to enhance the beauty and longevity of natural and engineered stone surfaces while prioritizing environmental sustainability and user safety.
-                </p>
-              </div>
-
-              <!-- CTA Button -->
-              <a
-                href="#solutions"
-                class="group  relative mt-12 inline-flex items-center bg-white text-[#1e1b4b] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold overflow-hidden"
-              >
-                <span class="relative z-10 group-hover:text-white">EXPLORE SOLUTIONS</span>
-                <div
-                  class="absolute left-0 w-0 h-full bg-black group-hover:w-full transition-all duration-300 ease-in-out -z-0"
-                ></div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 sm:h-5 sm:w-5 ml-2 relative z-10 group-hover:text-white transition-colors duration-300"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="footer"></div>
 
-    <style>
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fadeIn {
-        opacity: 0;
-        animation: fadeIn 0.8s ease-out forwards;
-      }
-
-      .animation-delay-200 {
-        animation-delay: 0.2s;
-      }
-
-      .animation-delay-400 {
-        animation-delay: 0.4s;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .container {
-          padding: 0 1rem;
-        }
-
-        .grid {
-          gap: 2rem;
-        }
-
-        /* Reset margins on mobile */
-        .mt-16,
-        .mt-32 {
-          margin-top: 2rem;
-        }
-
-        /* Adjust card padding */
-        .p-10 {
-          padding: 2rem;
-        }
-
-        /* Adjust background height */
-        .h-[400px] {
-          height: 300px;
-        }
-
-        /* Adjust card positioning */
-        .relative.-mt-40 {
-          margin-top: -2rem;
-        }
-      }
-
-      /* Card hover effect */
-      .transform:hover {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
-    </style>
-
     <script>
+      // Load header and footer
       fetch("header.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("header").innerHTML = data;
         });
-        fetch("footer.html")
+
+      fetch("footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
